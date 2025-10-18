@@ -1,0 +1,22 @@
+:root{--bg:#f7f9fc;--card:#ffffff;--muted:#555}
+html,body{height:100%;margin:0;font-family:Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:#222}
+main{max-width:1000px;margin:24px auto;padding:18px}
+h1{margin:0 0 12px}
+.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:12px}
+.controls label{background:var(--card);padding:8px;border-radius:6px;border:1px solid #e3e7ee}
+.options{display:flex;gap:8px}
+.canvas-wrap{background:linear-gradient(180deg,#eaf2ff,white);padding:12px;border-radius:8px;border:1px solid #d6e4ff}
+canvas{display:block;width:100%;height:auto;background:transparent;border-radius:6px}
+.canvas-wrap{position:relative}
+.legend{position:absolute;right:18px;top:18px;background:rgba(255,255,255,0.9);padding:8px;border-radius:6px;border:1px solid #d6e4ff;font-size:13px}
+.legend .key{display:inline-block;width:14px;height:10px;margin-right:8px;vertical-align:middle}
+.legend .weight{background:#d62728}
+.legend .normal{background:#2ca02c}
+.legend .parallel{background:#9467bd}
+.legend .friction{background:#8c564b}
+.legend .net{background:#e377c2}
+.results{margin-top:12px;background:var(--card);padding:12px;border-radius:6px;border:1px solid #e3e7ee}
+.results ul{margin:6px 0 0;padding-left:18px}
+footer{margin-top:8px;color:var(--muted);font-size:13px}
+button{padding:8px 12px;border-radius:6px;border:1px solid #bcd; background:#fff}
+@media (max-width:640px){.controls{flex-direction:column;align-items:stretch}}

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Inclined Plane — Resolution of Forces</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <h1>Inclined Plane — Resolution of Forces</h1>
+    <section class="controls">
+      <label>Mass (kg): <input id="mass" type="number" min="0.01" step="0.1" value="2"></label>
+      <label>Angle (°): <input id="angle" type="range" min="0" max="89" value="30"><span id="angleVal">30°</span></label>
+      <label>Vector scale: <input id="vecScale" type="range" min="2" max="40" value="12"></label>
+      <label>µ (coefficient of friction): <input id="mu" type="number" min="0" step="0.01" value="0.1"></label>
+      <label>g (m/s²): <input id="g" type="number" min="0" step="0.1" value="9.81"></label>
+      <div class="options">
+        <label><input id="showVectors" type="checkbox" checked> Show vectors</label>
+        <label><input id="showFriction" type="checkbox" checked> Show friction</label>
+      </div>
+      <button id="randomize">Randomize</button>
+    </section>
+
+    <section class="canvas-wrap">
+      <canvas id="canvas" width="800" height="480"></canvas>
+      <div class="legend" id="legend">
+        <div><span class="key weight"></span> Weight (W)</div>
+        <div><span class="key normal"></span> Normal (N)</div>
+        <div><span class="key parallel"></span> Parallel (W‖)</div>
+        <div><span class="key friction"></span> Friction (f)</div>
+        <div><span class="key net"></span> Net force (F_net)</div>
+      </div>
+    </section>
+
+    <section class="results">
+      <h2>Calculated values</h2>
+      <ul>
+        <li>Weight (mg): <span id="weight">-</span> N</li>
+        <li>Normal force: <span id="normal">-</span> N</li>
+        <li>Component along plane: <span id="parallel">-</span> N</li>
+        <li>Max static friction (µN): <span id="frictionMax">-</span> N</li>
+        <li>Friction used: <span id="frictionUsed">-</span> N</li>
+        <li>Net force along plane: <span id="net">-</span> N</li>
+        <li>Acceleration: <span id="acc">-</span> m/s²</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>Formulas: weight = m·g; normal = mg·cosθ; parallel = mg·sinθ; f_max = µ·normal; net = parallel - friction; a = net/m</p>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
