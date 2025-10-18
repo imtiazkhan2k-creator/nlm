@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Inclined Plane — Landing</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="landing">
+    <h1>Inclined Plane — Resolution of Forces Simulator</h1>
+
+    <section>
+      <h2>Overview</h2>
+      <p>This small static project demonstrates resolution of forces on an inclined plane. It computes weight, normal force, component of weight along the plane, maximum friction, the friction used, net force and acceleration. It also visualizes the incline, block and force vectors.</p>
+    </section>
+
+    <section>
+      <h2>Formulas</h2>
+      <ul>
+        <li>Weight: W = m * g</li>
+        <li>Normal force: N = W * cos(θ)</li>
+        <li>Component along plane: W_parallel = W * sin(θ)</li>
+        <li>Max friction (static/kinetic simplification): f_max = µ * N</li>
+        <li>Net force down the plane: F_net = W_parallel - f_used (if sliding)</li>
+        <li>Acceleration: a = F_net / m</li>
+      </ul>
+    </section>
+
+    <p><a class="btn" href="index.html">Open the simulator</a></p>
+
+    <footer>
+      <p>Open <strong>index.html</strong> to run the simulator.</p>
+    </footer>
+  </main>
+</body>
+</html>
